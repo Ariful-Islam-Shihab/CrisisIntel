@@ -1,0 +1,75 @@
+# --- Python / Django ---
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+local_settings.py
+
+# Unit test / coverage
+.coverage
+.coverage.*
+.pytest_cache/
+.tox/
+.mypy_cache/
+.nox/
+htmlcov/
+.coverage.
+.cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+Pipfile.lock
+poetry.lock
+
+# Project-specific virtualenv
+Backend/crisisintel/myenv/
+
+# Static/media build artifacts
+staticfiles/
+static/
+media/
+collectstatic/
+
+# --- Node/React ---
+node_modules/
+build/
+dist/
+.npm/
+.pnpm-store/
+yarn.lock
+pnpm-lock.yaml
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Environment / Secrets ---
+*.env
+*.env.*
+.env.local
+.env.development
+.env.production
+.env.test
+
+# --- Misc ---
+*.bak
+*.tmp
+~$*
+Trash/

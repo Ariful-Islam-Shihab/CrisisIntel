@@ -1,0 +1,12 @@
+asgiref
+Django
+django-cors-headers
+PyJWT
+pytz
+sqlparse
+python-dotenv
+mysqlclient
+channels
+channels-redis
+Pillow
+requests

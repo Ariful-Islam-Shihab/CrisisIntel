@@ -1,0 +1,71 @@
+/* FireTeams UI enhancement styling */
+.fire-teams-root { padding: 1rem; }
+.fire-teams-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+.fire-teams-tabs button { margin-right: 0.4rem; }
+.dept-select-row { margin: 0.5rem 0 0.75rem; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; }
+.inline-hint { font-size:0.8rem; font-style:italic; color:#555; margin:0.25rem 0 0.5rem; }
+
+/* Team creation form */
+.team-create-form { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem; }
+.team-create-form input { flex:1 1 180px; }
+.team-create-form select { flex:0 0 140px; }
+
+/* Teams grid */
+.teams-grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); margin-bottom:2rem; }
+.team-card { background:#fff; border:1px solid #d9dfe5; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.06); display:flex; flex-direction:column; position:relative; overflow:hidden; }
+.team-card.editing { border-color:#2d6cdf; box-shadow:0 0 0 2px rgba(45,108,223,0.15); }
+.team-card-header { padding:0.75rem 0.85rem; display:flex; flex-direction:column; gap:0.5rem; background:linear-gradient(180deg,#f9fbfc,#f2f4f6); border-bottom:1px solid #e3e8ec; }
+.team-card-header-row { display:flex; align-items:center; justify-content:space-between; gap:0.75rem; }
+.team-title { font-size:0.95rem; font-weight:600; line-height:1.2; word-break:break-word; }
+.team-meta { display:flex; gap:0.5rem; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.5px; color:#64748b; align-items:center; flex-wrap:wrap; }
+
+/* Status badge */
+.status-badge { display:inline-flex; align-items:center; padding:2px 7px; border-radius:999px; font-size:0.65rem; font-weight:600; letter-spacing:0.5px; background:#e2e8f0; color:#334155; text-transform:uppercase; }
+.status-available { background:#e3f9e5; color:#18794e; }
+.status-busy { background:#fff3cd; color:#936100; }
+.status-offline { background:#e2e8f0; color:#475569; }
+
+/* Member count chip */
+.member-chip { background:#edf2ff; color:#2d52a4; font-size:0.6rem; padding:2px 6px; border-radius:999px; font-weight:600; letter-spacing:0.4px; display:inline-flex; align-items:center; }
+
+/* Action buttons */
+.team-actions { display:flex; gap:0.35rem; flex-wrap:wrap; }
+.team-actions button { font-size:0.65rem; padding:4px 8px; border-radius:4px; border:1px solid #c4ccd4; background:#fff; cursor:pointer; }
+.team-actions button:hover { background:#f5f8fa; }
+.team-actions button.danger { border-color:#f1b4b4; color:#b42318; }
+.team-actions button.danger:hover { background:#ffecec; }
+.team-actions button.primary { border-color:#2d6cdf; background:#2d6cdf; color:#fff; }
+.team-actions button.primary:hover { background:#255bb5; }
+
+/* Edit inputs */
+.team-edit-row input, .team-edit-row select { font-size:0.75rem; padding:4px 6px; }
+.team-edit-row { display:flex; gap:0.4rem; flex-wrap:wrap; }
+
+/* Expand toggle */
+.expand-toggle { background:none; border:none; color:#2d6cdf; cursor:pointer; font-size:0.65rem; padding:0; }
+.expand-toggle:hover { text-decoration:underline; }
+
+/* Members panel */
+.members-panel { animation: fadeSlide 0.25s ease; display:flex; flex-direction:column; }
+@keyframes fadeSlide { from { opacity:0; transform:translateY(-4px);} to { opacity:1; transform:translateY(0);} }
+.members-inner { padding:0.75rem 0.85rem 0.9rem; display:flex; flex-direction:column; gap:0.65rem; }
+.add-member-row { display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center; }
+.add-member-row select { flex:1 1 140px; padding:4px 6px; }
+.add-member-row button { padding:5px 10px; font-size:0.7rem; }
+
+/* Members table */
+.members-table { width:100%; border-collapse:collapse; font-size:0.7rem; }
+.members-table th, .members-table td { border:1px solid #e2e8f0; padding:4px 6px; text-align:left; }
+.members-table th { background:#f1f5f9; font-weight:600; font-size:0.6rem; letter-spacing:0.5px; color:#475569; }
+.members-empty { font-style:italic; padding:0.5rem 0; font-size:0.7rem; color:#6b7280; }
+
+/* Utility */
+.muted { color:#6b7280; }
+.small { font-size:0.65rem; }
+.divider { height:1px; background:#e5e9ed; width:100%; border:0; margin:0.25rem 0; }
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .teams-grid { grid-template-columns:1fr; }
+  .team-actions { justify-content:flex-start; }
+}
