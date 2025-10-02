@@ -1,0 +1,50 @@
+CrisisIntel Demo Accounts
+Theme: Game of Thrones / House of the Dragon (fan favorites), Harry Potter, Demon Slayer (expanded), Death Note, Attack on Titan
+
+Password for all accounts: demo1234 (demo only)
+Note: Passwords are stored as PBKDF2-SHA256 hashes in DB. The app verifies these via utils._verify_password.
+
+Users (role: regular unless noted)
+- jon.snow@got.local (role: admin) — Jon Snow
+- arya.stark@got.local — Arya Stark
+- daemon.targaryen@hotd.local — Daemon Targaryen
+- aegon.targaryen@hotd.local — Aegon Targaryen
+- harry.potter@hogwarts.local — Harry Potter
+- hermione.granger@hogwarts.local — Hermione Granger
+- ron.weasley@hogwarts.local — Ron Weasley
+- albus.dumbledore@hogwarts.local (role: admin) — Albus Dumbledore
+- minerva.mcgonagall@hogwarts.local — Minerva McGonagall
+- tanjiro.kamado@demoncorp.local — Tanjiro Kamado
+- nezuko.kamado@demoncorp.local — Nezuko Kamado
+- zenitsu.agatsuma@demoncorp.local — Zenitsu Agatsuma
+- inosuke.hashibira@demoncorp.local — Inosuke Hashibira
+- giyu.tomioka@demoncorp.local — Giyu Tomioka
+- shinobu.kocho@demoncorp.local — Shinobu Kocho
+- mitsuri.kanroji@demoncorp.local — Mitsuri Kanroji
+- tengen.uzui@demoncorp.local — Tengen Uzui
+- muichiro.tokito@demoncorp.local — Muichiro Tokito
+- kyojuro.rengoku@demoncorp.local — Kyojuro Rengoku
+- light.yagami@dn.local — Light Yagami
+- l.lawliet@dn.local — L Lawliet
+- misa.amane@dn.local — Misa Amane
+- eren.yeager@aot.local — Eren Yeager
+- mikasa.ackerman@aot.local — Mikasa Ackerman
+- armin.arlert@aot.local — Armin Arlert
+- levi.ackerman@aot.local — Levi Ackerman
+- hange.zoe@aot.local — Hange Zoë
+- sasha.braus@aot.local — Sasha Braus
+- jean.kirstein@aot.local — Jean Kirstein
+
+Organizations & Services
+- st.mungos@hospital.local (role: hospital) — St Mungo's Hospital
+- kings.landing.med@hospital.local (role: hospital) — King's Landing Medical
+- goteast.firedept@fd.local (role: fire_department) — King's Landing Fire Dept
+- wall.firedept@fd.local (role: fire_department) — Night's Watch Fire Dept
+- red.cross@org.local (role: org) — Red
+ Maesters
+- order.of.phoenix@org.local (role: org) — Order of the Phoenix
+- blood.bank@bank.local (role: blood_bank) — Braavos Blood Bank
+
+Notes
+- All accounts are pre-seeded with coordinates and linked demo records for crises, victims, blood features, fire dispatch, incidents, org deployments, and campaigns.
+- Change passwords before any non-demo use.
