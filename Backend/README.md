@@ -22,9 +22,23 @@ Create a MySQL database (or let schema.sql create it):
 mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS crisisintel CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 ```
 
-### 3. Apply Raw SQL Migrations
+### 3. Apply SQL Migrations (use apply_sql)
+The legacy `apply_raw_sql` command is deprecated. Use `apply_sql`, which scans `Backend/crisisintel/sql/` and records applied files in `schema_migrations`.
+
+Basic run (applies all pending .sql files in safe order):
 ```
-python manage.py apply_raw_sql
+python manage.py apply_sql
+```
+
+Apply a single SQL file by name (useful for the finalized schema or seed data):
+```
+python manage.py apply_sql --one final_normalized_schema.sql
+python manage.py apply_sql --one seed_data.sql
+```
+
+Optional: Preview without applying
+```
+python manage.py apply_sql --dry-run
 ```
 
 ### 4. Run Development Server
@@ -37,6 +51,38 @@ python manage.py runserver
 python manage.py seed_demo
 ```
 Creates sample users (admin, two regular users, fire service), posts, a conversation with messages, a blood direct request, and a fire service request with a candidate.
+
+### 5b. Finalized Schema + Final Seed (recommended for the production-like dataset)
+If you want the final normalized schema and the final seed set (instead of the small demo dataset above), run the following from `Backend/crisisintel`:
+
+1) Create/upgrade to the finalized normalized schema
+```
+python manage.py apply_sql --one final_normalized_schema.sql
+```
+
+2) Seed the final data
+```
+python manage.py apply_sql --one seed_data.sql
+```
+
+Notes
+- These commands are idempotent: each SQL file is recorded in `schema_migrations` and won’t be re-applied unless you remove its entry.
+- If you need a clean rebuild, you can reset the database and then re-apply the final schema and seed:
+  - Make sure you’re okay with losing existing data.
+  - Drop all tables (optional helper file provided):
+    ```
+    python manage.py apply_sql --one 20251001_drop_all_tables.sql
+    ```
+  - Re-apply the finalized schema and seed as shown above.
+- Alternative (MySQL CLI):
+  - Apply schema
+    ```
+    mysql -u root -p crisisintel < Backend/crisisintel/sql/final_normalized_schema.sql
+    ```
+  - Seed data
+    ```
+    mysql -u root -p crisisintel < Backend/crisisintel/sql/seed_data.sql
+    ```
 
 ### 6. Run Tests
 ```
