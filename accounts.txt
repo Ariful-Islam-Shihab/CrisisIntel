@@ -1,6 +1,6 @@
 CrisisIntel Demo Accounts
 Theme: Game of Thrones / House of the Dragon (fan favorites), Harry Potter, Demon Slayer (expanded), Death Note, Attack on Titan
-
+  
 Password for all accounts: demo1234 (demo only)
 Note: Passwords are stored as PBKDF2-SHA256 hashes in DB. The app verifies these via utils._verify_password.
 
